@@ -1,0 +1,92 @@
+$primary-color: #001021;
+$secondary-color: #034748;
+$tertiary-color: #77CBB9;
+$quaternary-color: #FCF7FF;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.exp {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    pointer-events: all;
+}
+
+.starttime {
+    height: 50%;
+}
+
+
+.timeline {
+    width: 100%;
+    display: flex;
+
+}
+
+.timeleft,
+.timeright {
+    width: 50%;
+}
+
+.timeleft {
+    border-right: 2px solid $secondary-color;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+.timeright {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+
+    span {
+        padding-bottom: 20px;
+    }
+}
+
+.sectionline {
+    border: 1px solid $secondary-color;
+    width: 100px;
+    height: 2px;
+}
+
+.year {
+    color: $quaternary-color;
+    width: 100px;
+    border-top: 2px solid $secondary-color;
+    font-size: 1.2rem;
+}
+
+.title {
+    color: $quaternary-color;
+    font-size: 1.2rem;
+}
+
+.company {
+    color: $tertiary-color;
+}
+
+.description {
+    font-family: 'Courier Prime', Courier, monospace;
+    color: $tertiary-color;
+}
+
+li {
+    padding: 100px;
+}
+
+/**
+ Mobile Styles
+ */
+ @media screen and (max-width: 768px) {
+
+    .exp{
+        margin-right: 10%;
+        width: auto;
+    }
+}

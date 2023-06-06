@@ -1,0 +1,29 @@
+<div class="skills">
+    <div class="fr animate__animated animate__fadeInDown">
+        <span>Front-End</span>
+        <div class="cr">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let skill of frontendSkills">
+                    <div class="slide">
+                        <img [src]="skill.img" alt="{{skill.name}}">
+                        <p>{{skill.name}}</p>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+
+    </div>
+    <div class="bk animate__animated animate__fadeInUp">
+        <span>Back-End</span>
+        <div class="cr">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let skill of backendSkills">
+                    <div class="slide">
+                        <img [src]=skill.img alt="img 1">
+                        <p>{{skill.name}}</p>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

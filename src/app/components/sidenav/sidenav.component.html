@@ -1,0 +1,24 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''" (mouseleave)="leave()" (mouseenter)="enter()">
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <i class=" sidenav-link-icon" [class]="data.icon"></i>
+                <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">{{data.label}}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="cv-link sidenav-nav-link" @fadeInOut *ngIf="collapsed">
+        <button href="" class="cv-link-btn" (click)="downloadCv()">
+            <i class="sidenav-link-icon fi fi-rs-form animate__animated" [ngClass]="{'animate__backOutDown': addClass}"
+                *ngIf="!downloadedCv"></i>
+            <span class="sidenav-link-text cv-text animate__animated" [ngClass]="{'animate__backOutDown': addClass}"
+                *ngIf="!downloadedCv">Download CV</span>
+            <i class="sidenav-link-icon sidenav-check fi fi-bs-check animate__animated animate__backInUp"
+                [class.animate__backInUp]="addClass" *ngIf="downloadedCv"></i>
+
+        </button>
+    </div>
+
+
+</div>

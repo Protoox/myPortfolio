@@ -1,0 +1,15 @@
+<div class="exp">
+    <div class="starttime"></div>
+    <div class="timeline animate__animated animate__zoomIn" *ngFor="let exp of expData">
+        <div class="timeleft" [style.height.px]="exp.time ? exp.time*50 : 100 ">
+            <span class="year">{{exp.date}}</span>
+
+        </div>
+        <div class="timeright">
+            <span class="title">{{exp.title}}</span>
+            <span class="company" *ngIf="exp.company">{{exp.company}}</span>
+            <span class="description">{{exp.description}}</span>
+        </div>
+    </div>
+
+</div>
